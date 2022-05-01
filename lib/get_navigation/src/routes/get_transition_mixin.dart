@@ -405,7 +405,8 @@ Cannot read the previousTitle for a route that has not yet been installed''',
             route.popGesture ?? Get.defaultPopGesture
                 ? GestureDetector(
                     onPanUpdate: (detail) {
-                      if (detail.delta.dx > 24 || detail.delta.dy > 24) {
+                      if (detail.delta.dx > 16 || detail.delta.dy > 16 || 
+                          detail.delta.dx < -16 || detail.delta.dy < -16) {
                         Get.back();
                       }
                     },
