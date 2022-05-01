@@ -20,7 +20,7 @@ class GetPage<T> extends Page<T> {
   final Bindings? binding;
   final List<Bindings> bindings;
   final CustomTransition? customTransition;
-  Duration? transitionDuration;
+  final Duration? transitionDuration;
   final bool fullscreenDialog;
   final bool preventDuplicates;
   // @override
