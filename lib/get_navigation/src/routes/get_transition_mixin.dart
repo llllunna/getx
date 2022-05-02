@@ -305,7 +305,9 @@ Cannot read the previousTitle for a route that has not yet been installed''',
     // Don't perform outgoing animation if the next route is a
     // fullscreen dialog.
 
-    if (nextRoute is GetPageRoute && nextRoute.transition == Transition.fadeIn) {
+    if (nextRoute is GetPageRoute && 
+      (nextRoute.transition == Transition.fadeIn ||
+      nextRoute.transition == Transition.downToUp)) {
       return false;
     }
 
